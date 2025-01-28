@@ -18,7 +18,7 @@ let products = [
     {id:"16", image:"Images/16.png", name:"White Modern Villa",ptype:"", psize:"",pdetail:"",pprice:""},
     {id:"17", image:"Images/17.png", name:"Luxury House of City",ptype:"", psize:"",pdetail:"",pprice:""},
     {id:"18", image:"Images/18.png", name:"House in the Grass Land",ptype:"", psize:"",pdetail:"",pprice:""},
-    {id:"19", image:"Images/19.png", name:"Wild Property",ptype:"", psize:"",pdetail:"",pprice:""},
+    {id:"19", image:"Images/19.png", name:"House by the Hills Side",ptype:"", psize:"",pdetail:"",pprice:""},
     {id:"20", image:"Images/20.png", name:"White Hiuse By the Canal",ptype:"", psize:"",pdetail:"",pprice:""},
     {id:"21", image:"Images/21.png", name:"Family Vacation House",ptype:"", psize:"",pdetail:"",pprice:""},
     {id:"22", image:"Images/22.png", name:"Gray House on White Hill",ptype:"", psize:"",pdetail:"",pprice:""},
