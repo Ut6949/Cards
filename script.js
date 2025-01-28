@@ -1,15 +1,15 @@
 allProducts = document.getElementById("allProducts");
 let products = [
-    {id:"1", image:"Images/1.png", name:"Wild Property",ptype:"", psize:"",pdetail:"",pprice:""},
-    {id:"2", image:"Images/2.png", name:"Wild Property",ptype:"", psize:"",pdetail:"",pprice:""},
-    {id:"3", image:"Images/3.png", name:"Wild Property",ptype:"", psize:"",pdetail:"",pprice:""},
-    {id:"4", image:"Images/4.png", name:"Wild Property",ptype:"", psize:"",pdetail:"",pprice:""},
-    {id:"5", image:"Images/5.png", name:"Wild Property",ptype:"", psize:"",pdetail:"",pprice:""},
-    {id:"6", image:"Images/6.png", name:"Wild Property",ptype:"", psize:"",pdetail:"",pprice:""},
-    {id:"7", image:"Images/7.png", name:"Wild Property",ptype:"", psize:"",pdetail:"",pprice:""},
-    {id:"8", image:"Images/8.png", name:"Wild Property",ptype:"", psize:"",pdetail:"",pprice:""},
-    {id:"9", image:"Images/9.png", name:"Wild Property",ptype:"", psize:"",pdetail:"",pprice:""},
-    {id:"10", image:"Images/10.png", name:"Wild Property",ptype:"", psize:"",pdetail:"",pprice:""},
+    {id:"1", image:"Images/1.png", name:"Pink House By the Lake",ptype:"", psize:"",pdetail:"",pprice:""},
+    {id:"2", image:"Images/2.png", name:"Stone House on the Hills",ptype:"", psize:"",pdetail:"",pprice:""},
+    {id:"3", image:"Images/3.png", name:"Forest Front Property",ptype:"", psize:"",pdetail:"",pprice:""},
+    {id:"4", image:"Images/4.png", name:"Blackwood Small House",ptype:"", psize:"",pdetail:"",pprice:""},
+    {id:"5", image:"Images/5.png", name:"Brown House with a Driveway",ptype:"", psize:"",pdetail:"",pprice:""},
+    {id:"6", image:"Images/6.png", name:"Lonely House in the Green",ptype:"", psize:"",pdetail:"",pprice:""},
+    {id:"7", image:"Images/7.png", name:"Grey Blue Victorian House",ptype:"", psize:"",pdetail:"",pprice:""},
+    {id:"8", image:"Images/8.png", name:"Small Country Side Cottage",ptype:"", psize:"",pdetail:"",pprice:""},
+    {id:"9", image:"Images/9.png", name:"Property With Red Sand",ptype:"", psize:"",pdetail:"",pprice:""},
+    {id:"10", image:"Images/10.png", name:"Red Barn Style House",ptype:"", psize:"",pdetail:"",pprice:""},
     {id:"11", image:"Images/11.png", name:"Wild Property",ptype:"", psize:"",pdetail:"",pprice:""},
     {id:"12", image:"Images/12.png", name:"Wild Property",ptype:"", psize:"",pdetail:"",pprice:""},
     {id:"13", image:"Images/13.png", name:"Wild Property",ptype:"", psize:"",pdetail:"",pprice:""},
@@ -24,7 +24,7 @@ let products = [
     {id:"22", image:"Images/22.png", name:"Wild Property",ptype:"", psize:"",pdetail:"",pprice:""},
     {id:"23", image:"Images/23.png", name:"Wild Property",ptype:"", psize:"",pdetail:"",pprice:""},
     {id:"24", image:"Images/24.png", name:"Wild Property",ptype:"", psize:"",pdetail:"",pprice:""},
-    {id:"25", image:"Images/25.png", name:"Wild Property",ptype:"", psize:"",pdetail:"",pprice:""}];
+    {id:"25", image:"Images/25.png", name:"Modern Style Villa",ptype:"", psize:"",pdetail:"",pprice:""}];
 for (var i=0; i < products.length; i++) {
 allProducts.innerHTML += `
         <div class="col-xl-3 col-lg-3 col-md-4 col-sm- col-12">
@@ -32,12 +32,13 @@ allProducts.innerHTML += `
               <img height="200" src="${products[i].image}"  class="card-img-top" alt="${products[i].name}"/>
               </div>
               <div class="card-body">
-                <h2 class="card-title">${products[i].name}</h2>
-                <h3 class="card-title">${products[i].ptype}</h3>
-                <h3 class="card-title">${products[i].psize}</h3>
-                <p class="card-text">
+                <h2 class="card-pname">${products[i].name}</h2>
+                <h3 class="card-ptype">${products[i].ptype}</h3>
+                <h3 class="card-psize">${products[i].psize}</h3>
+                <p class="card-pdetail">
                   ${products[i].pdetail}
                 </p>
+                <h3 class="card-psize">${products[i].pprice}</h3>
                 <a href="#" class="btn btn-primary">Details</a>
               </div>
             
