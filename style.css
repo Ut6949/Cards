@@ -3,9 +3,13 @@
 }
 
 #page_ttl {
-  font-size: 900;
+  font-size: 500px;
   margin: 0;
-  color: rgb(0, 8, 255);
-  font-weight: 300;
+  color: rgb(248, 255, 41);
+  font-weight: 500;
   font-size: xx-large;
+}
+#cards{
+  /* box-shadow: 2px 8px 10px rgb(142, 204, 255); */
+  padding: 5px;
 }
