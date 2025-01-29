@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <!-- place navbar here -->
+      <div class="container-fluid">
+        <div class="row py-3" id="heading">
+          <div
+            class="col-md-12 d-flex justify-content-center align-item-middle"
+          >
+            <p id="page_ttl">Each Product Page</p>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="container my-5">
+        <div class="row ">
+          <div class="col-md-6 d-flex justify-content-center ">
+            <img id="productImage" class="img-fluid " alt="Product Image">
+          </div>
+          <div class="col-md-6">
+            <h1 id="productName"></h1>
+            <p id="productType"></p>
+            <h3 id="productPrice"></h3>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <!-- place footer here -->
+    </footer>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+        let products = [
+    {image:"Images/1.png", name:"Pink House By the Lake",ptype:"Lake House", psize:"",pdetail:"",pprice:"$ 20 mil"},
+    {image:"Images/2.png", name:"Stone House on the Hills",ptype:"Hill House", psize:"",pdetail:"",pprice:"$ 30 mil"},
+    {image:"Images/3.png", name:"Forest Front Property",ptype:"Forest House", psize:"",pdetail:"",pprice:"$ 25 mil"},
+    {image:"Images/4.png", name:"Blackwood Small House",ptype:"Modern House", psize:"",pdetail:"",pprice:"$ 18 mil"},
+    {image:"Images/5.png", name:"Brown House with a Driveway",ptype:"Modern House", psize:"",pdetail:"",pprice:"$ 22 mil"},
+    {image:"Images/6.png", name:"Lonely House in the Green",ptype:"Field House", psize:"",pdetail:"",pprice:"$ 28 mil"},
+    {image:"Images/7.png", name:"Grey Blue Victorian House",ptype:"Victorian Style", psize:"",pdetail:"",pprice:"$ 35 mil"},
+    {image:"Images/8.png", name:"Small Country Side Cottage",ptype:"Cottage", psize:"",pdetail:"",pprice:"$ 15 mil"},
+    {image:"Images/9.png", name:"House With Red Sand",ptype:"Bungalow", psize:"",pdetail:"",pprice:"$ 32 mil"},
+    {image:"Images/10.png", name:"Red Barn Style House",ptype:"Barn House", psize:"",pdetail:"",pprice:"$ 29 mil"},
+    {image:"Images/11.png", name:"Yellow Stone House",ptype:"Stone House", psize:"",pdetail:"",pprice:"$ 24 mil"},
+    {image:"Images/12.png", name:"Stone House By the Lake",ptype:"Lake House", psize:"",pdetail:"",pprice:"$ 26 mil"},
+    {image:"Images/13.png", name:"Gray House by the Woods",ptype:"Forest House", psize:"",pdetail:"",pprice:"$ 31 mil"},
+    {image:"Images/14.png", name:"White Victorian Style House",ptype:"Victorian House", psize:"",pdetail:"",pprice:"$ 38 mil"},
+    {image:"Images/15.png", name:"Yellow House in City",ptype:"City House", psize:"",pdetail:"",pprice:"$ 21 mil"},
+    {image:"Images/16.png", name:"White Modern Villa",ptype:"Villa", psize:"",pdetail:"",pprice:"$ 40 mil"},
+    {image:"Images/17.png", name:"Luxury House of City",ptype:"Mansion", psize:"",pdetail:"",pprice:"$ 45 mil"},
+    {image:"Images/18.png", name:"House in the Grass Land",ptype:"House", psize:"",pdetail:"",pprice:"$ 19 mil"},
+    {image:"Images/19.png", name:"House By the Mountains",ptype:"Mountain House", psize:"",pdetail:"",pprice:"$ 34 mil"},
+    {image:"Images/20.png", name:"White House By the Canal",ptype:"Modern House", psize:"",pdetail:"",pprice:"$ 27 mil"},
+    {image:"Images/21.png", name:"Family Vacation House",ptype:"Vacation House", psize:"",pdetail:"",pprice:"$ 23 mil"},
+    {image:"Images/22.png", name:"Gray House on White Hill",ptype:"Hill House", psize:"",pdetail:"",pprice:"$ 39 mil"},
+    {image:"Images/23.png", name:"Small White Wood house",ptype:"", psize:"",pdetail:"",pprice:"$ 17 mil"},
+    {image:"Images/24.png", name:"Luxury City House",ptype:"", psize:"",pdetail:"",pprice:"$ 42 mil"},
+    {image:"Images/25.png", name:"Modern Style Villa",ptype:"", psize:"",pdetail:"",pprice:"$ 50 mil"}
+        ]
+        let productImage = document.getElementById("productImage");
+        let productName = document.getElementById("productName");
+        let productType = document.getElementById("productType");
+        let productPrice = document.getElementById("productPrice");
+
+        let queryParams = new URLSearchParams(window.location.search);
+        let paramId = queryParams.get("id");
+
+        if (paramId !== null)   {
+            productImage.src = products[paramId].image;
+            productName.textContent = products[paramId].name;
+            productType.textContent = products[paramId].ptype;
+            productPrice.textContent = products[paramId].pprice;
+        }
+    </script>
+  </body>
+</html>
